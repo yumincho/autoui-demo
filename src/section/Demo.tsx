@@ -36,13 +36,17 @@ const Dialogue = styled.div`
   overflow: auto;
   border-radius: 5px;
   width: 100%;
-  gap: 4px;
 `;
 
-const Utterance = styled.div`
-  background-color: ${(props) =>
-    props.role === "assistant" ? colors.gray100 : colors.white};
+interface UtteranceProps {
+  role: string;
+  checked?: boolean;
+}
 
+const Utterance = styled.div<UtteranceProps>`
+  background-color: ${(props) =>
+    props.role === "user" ? colors.white : colors.gray100};
+  color: ${(props) => (props.checked ? colors.blue500 : "")};
   display: flex;
   gap: 10px;
   text-align: left;
@@ -116,7 +120,11 @@ const Demo = () => {
         </Tags>
         <Dialogue>
           {dialogueData[utteranceType].map((utterance) => (
-            <Utterance key={utterance.id} role={utterance.role}>
+            <Utterance
+              key={utterance.id}
+              role={utterance.role}
+              checked={"checked" in utterance && utterance.checked}
+            >
               <Role>
                 {utterance.role == "assistant" ? (
                   <img src="/src/asset/chatgpt.png" width="32" />
