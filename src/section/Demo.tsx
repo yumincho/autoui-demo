@@ -9,13 +9,14 @@ import { colors } from "@/styles";
 const Layout = styled.div`
   display: grid;
   grid-template-rows: 580px 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   height: 600px;
+  max-width: 960px;
+  width: 100%;
 `;
 
 const Dialogues = styled.div`
   display: flex;
-  padding: 10px;
   height: 100%;
   gap: 10px;
 `;
@@ -36,6 +37,7 @@ const Dialogue = styled.div`
   overflow: auto;
   border-radius: 5px;
   width: 100%;
+  border: 1px solid ${colors.gray300};
 `;
 
 interface UtteranceProps {
