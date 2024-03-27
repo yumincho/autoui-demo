@@ -1,0 +1,7 @@
+const paperData = {
+  title: "GPT Shortcut: Learning Reusable Functions from User Dialogues",
+  abstract:
+    "LLM-powered conversational interfaces (e.g., ChatGPT and Gemini) have been supporting iterative text generations, allowing users to generate satisfying texts through a series of follow-up instructions.\nDespite their flexibility and ease of use, replicating such iterative text generation tasks in different contexts is an inefficient and cumbersome process, with users having to repeatedly specify their requirements in varying situations. To address the challenge, we introduce the concept of \textit{GPT shortcuts}, which learn a reusable function from a user dialogue. The goal of GPT shortcut is to learn users' text generation process from dialogues and apply the learned patterns for consistent text generations in different contexts. As a novel technique of GPT shortcut generation, we introduce VOI prompting, which constructs user instructions in three dimensions - Voice, Organization, and Idea dimensions from the six traits of writing framework - from a user dialogue and performs one-shot learning with the extracted instructions. Our quantitative evaluation results show that VOI prompting consistently generates texts that address user instructions specified in the dialogue. In addition, we report an in-depth ablation study using synthetic datasets, which justifies the design decision behind the VOI prompting technique.",
+};
+
+export default paperData;
