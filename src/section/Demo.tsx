@@ -117,9 +117,9 @@ const Demo = () => {
             <Utterance key={utterance.id} role={utterance.role}>
               <Role>
                 {utterance.role == "assistant" ? (
-                  <img src="./src/asset/chatgpt.png" width="32" />
+                  <img src="/assets/chatgpt.png" width="32" />
                 ) : (
-                  <img src="./src/asset/user.svg" width="32" />
+                  <img src="/assets/user.svg" width="32" />
                 )}
               </Role>
               <Content>
