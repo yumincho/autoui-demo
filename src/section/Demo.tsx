@@ -25,7 +25,6 @@ const Tags = styled.div`
   gap: 8px;
   width: fit-content;
   overflow: auto;
-  margin-top: 18px;
 `;
 
 const Dialogue = styled.div`
@@ -66,7 +65,7 @@ const Content = styled.div`
 
 const Playground = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   text-align: left;
   padding: 10px;
   gap: 10px;
@@ -98,7 +97,7 @@ const DialogueButton = styled.button`
   margin-left: auto;
   padding: 0;
   appearance: none;
-  margin-bottom: 4px;
+  margin-top: 4px;
 
   &:active,
   &:focus {
@@ -135,9 +134,6 @@ const Demo = () => {
         </Tags>
         {showDialogue && (
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <DialogueButton onClick={() => setShowDialogue(false)}>
-              Close the Dialogue
-            </DialogueButton>
             <Dialogue>
               {dialogueData[utteranceType].map((utterance) => (
                 <Utterance key={utterance.id} role={utterance.role}>
@@ -154,6 +150,9 @@ const Demo = () => {
                 </Utterance>
               ))}
             </Dialogue>
+            <DialogueButton onClick={() => setShowDialogue(false)}>
+              Close the Dialogue
+            </DialogueButton>
           </div>
         )}
       </Dialogues>
