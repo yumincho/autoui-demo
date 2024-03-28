@@ -7,11 +7,8 @@ import { dialogueDataKeys } from "@/data/dialogue";
 import { colors } from "@/styles";
 
 const Layout = styled.div`
-  display: grid;
-  grid-template-rows: 580px 1fr;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
   height: 600px;
-  max-width: 960px;
   width: 100%;
 `;
 
@@ -37,7 +34,7 @@ const Dialogue = styled.div`
   height: 100%;
   overflow: auto;
   border-radius: 5px;
-  width: 100%;
+  width: 50ch;
   border: 1px solid ${colors.gray300};
 `;
 
@@ -73,6 +70,7 @@ const Playground = styled.div`
   padding: 10px;
   gap: 10px;
   height: auto;
+  width: 100%;
 `;
 
 const Input = styled.label`
