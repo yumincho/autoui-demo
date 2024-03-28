@@ -30,7 +30,7 @@ const Result = styled.div`
   height: 100%;
 `;
 
-const url = "http://server.hyungyu.com:7161/runShortcut";
+const url = "https://server.hyungyu.com:7161/runShortcut";
 const data = (
   userID: string,
   shortcutID: string,
