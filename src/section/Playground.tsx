@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 import { colors } from "@/styles";
 import { FormEvent, useState } from "react";
@@ -105,7 +106,7 @@ const Playground = ({ userID, shortcutID, shortcutIndex }: DialogueConfig) => {
       </form>
 
       <Result>
-        <Markdown>{result}</Markdown>
+        <Markdown remarkPlugins={[remarkGfm]}>{result}</Markdown>
       </Result>
     </Layout>
   );

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 import dialogueData from "@/data/dialogue";
 import { dialogueDataKeys } from "@/data/dialogue";
@@ -114,7 +116,9 @@ const Dialogue = ({ utteranceType, setUtteranceType }: DialogueProps) => {
                   )}
                 </Role>
                 <Content>
-                  <div>{utterance.content}</div>
+                  <Markdown remarkPlugins={[remarkGfm]}>
+                    {utterance.content}
+                  </Markdown>
                 </Content>
               </Utterance>
             ))}
