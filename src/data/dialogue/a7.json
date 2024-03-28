@@ -1,8 +1,8 @@
 [
   {
-    "category": "Editing",
+    "category": "Editing 1",
     "subcategory": "Grammar Correction",
-    "iteration_index": 1,
+    "id": 1,
     "role": "user",
     "content": "Hey, can you help me correct the grammar in this paragraph? 'Every persons dream is to achieved success in their life. However, success comes with lot of hardwork and dedication. Sometime, we seen people giving up too early.'",
     "condition": "The user requires basic grammar correction for their input text. The feedback focuses on correcting grammatical errors without altering the meaning or structure of the original text."
@@ -10,7 +10,7 @@
   {
     "category": "Editing",
     "subcategory": "Grammar Correction",
-    "iteration_index": 1,
+    "id": 1,
     "role": "assistant",
     "content": "Sure, I'd be happy to help. Here's a corrected version of your paragraph: 'Every person's dream is to achieve success in their life. However, success comes with a lot of hard work and dedication. Sometimes, we see people giving up too early.'",
     "condition": "The user requires basic grammar correction for their input text. The feedback focuses on correcting grammatical errors without altering the meaning or structure of the original text."
@@ -18,7 +18,7 @@
   {
     "category": "Editing",
     "subcategory": "Grammar Correction",
-    "iteration_index": 2,
+    "id": 2,
     "role": "user",
     "content": "Thanks! Could you make it sound a bit more formal and add a sentence about the importance of perseverance?",
     "condition": "The user wants the text to be formalized and enriched with a sentence highlighting the significance of perseverance. The request specifies elevating the tone of the text while incorporating additional content related to perseverance."
@@ -26,7 +26,7 @@
   {
     "category": "Editing",
     "subcategory": "Grammar Correction",
-    "iteration_index": 2,
+    "id": 2,
     "role": "assistant",
     "content": "Certainly. Here's a more formal version of your paragraph with an added sentence on perseverance: 'Each individual's aspiration is to attain success in their life. However, achieving success necessitates a considerable amount of hard work and unwavering dedication. Occasionally, we observe individuals relinquishing their efforts prematurely. It is essential to underscore that perseverance plays a pivotal role in overcoming obstacles and reaching one's goals.'",
     "condition": "The user wants the text to be formalized and enriched with a sentence highlighting the significance of perseverance. The request specifies elevating the tone of the text while incorporating additional content related to perseverance."
@@ -34,7 +34,7 @@
   {
     "category": "Editing",
     "subcategory": "Grammar Correction",
-    "iteration_index": 3,
+    "id": 3,
     "role": "user",
     "content": "This is getting better. Can you now enhance the paragraph by integrating a motivational quote about success and perseverance?",
     "condition": "The user requests the addition of a motivational quote to the paragraph to emphasize the themes of success and perseverance further. The feedback aims to incorporate a quote that reinforces the message of perseverance and determination."
@@ -42,7 +42,7 @@
   {
     "category": "Editing",
     "subcategory": "Grammar Correction",
-    "iteration_index": 3,
+    "id": 3,
     "role": "assistant",
     "content": "Absolutely. Here's the enhanced paragraph with a motivational quote: 'Each individual's aspiration is to attain success in their life. However, achieving success necessitates a considerable amount of hard work and unwavering dedication. Occasionally, we observe individuals relinquishing their efforts prematurely. It is essential to underscore that perseverance plays a pivotal role in overcoming obstacles and reaching one's goals. As the adage goes, \"Success is not final, failure is not fatal: It is the courage to continue that counts.\" This quote encapsulates the essence of perseverance in the pursuit of success.'",
     "condition": "The user requests the addition of a motivational quote to the paragraph to emphasize the themes of success and perseverance further. The feedback aims to incorporate a quote that reinforces the message of perseverance and determination."

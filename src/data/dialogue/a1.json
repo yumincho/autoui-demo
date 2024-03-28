@@ -1,8 +1,8 @@
 [
   {
-    "category": "Information seeking",
+    "category": "Information seeking 1",
     "subcategory": "Recipe Retrieval",
-    "iteration_index": 1,
+    "id": 1,
     "role": "user",
     "content": "I'm looking for a traditional Italian lasagna recipe.",
     "condition": "User seeks a traditional Italian lasagna recipe but hasn't specified any dietary restrictions, preferences, or specific ingredients they want to include or avoid."
@@ -10,7 +10,7 @@
   {
     "category": "Information seeking",
     "subcategory": "Recipe Retrieval",
-    "iteration_index": 1,
+    "id": 1,
     "role": "assistant",
     "content": "Sure, I can help with that. Traditional Italian lasagna typically features layers of flat lasagna noodles, rag\u00f9 (a meat sauce), b\u00e9chamel sauce, and Parmigiano-Reggiano cheese. Would you like a recipe that includes all these elements, or do you have any dietary restrictions or preferences I should be aware of?",
     "condition": "User seeks a traditional Italian lasagna recipe but hasn't specified any dietary restrictions, preferences, or specific ingredients they want to include or avoid."
@@ -18,7 +18,7 @@
   {
     "category": "Information seeking",
     "subcategory": "Recipe Retrieval",
-    "iteration_index": 2,
+    "id": 2,
     "role": "user",
     "content": "Actually, I'd prefer a vegetarian option, if possible. And I have some spinach and mushrooms in the fridge I'd like to use.",
     "condition": "User prefers a vegetarian lasagna recipe and wants to incorporate spinach and mushrooms they already have. They are open to suggestions for additional vegetables or ingredient substitutions."
@@ -26,7 +26,7 @@
   {
     "category": "Information seeking",
     "subcategory": "Recipe Retrieval",
-    "iteration_index": 2,
+    "id": 2,
     "role": "assistant",
     "content": "Great, I can provide a vegetarian lasagna recipe that includes spinach and mushrooms. The recipe will replace the traditional rag\u00f9 with a rich tomato sauce and will be layered with your spinach and mushrooms, ricotta cheese, mozzarella, and b\u00e9chamel sauce. Does that sound good, or would you like to include any other vegetables or substitute any ingredients?",
     "condition": "User prefers a vegetarian lasagna recipe and wants to incorporate spinach and mushrooms they already have. They are open to suggestions for additional vegetables or ingredient substitutions."
@@ -34,7 +34,7 @@
   {
     "category": "Information seeking",
     "subcategory": "Recipe Retrieval",
-    "iteration_index": 3,
+    "id": 3,
     "role": "user",
     "content": "That sounds perfect, but could you also make it gluten-free? And how about adding some zucchini and replacing b\u00e9chamel sauce with something lighter?",
     "condition": "User requests a gluten-free vegetarian lasagna recipe, incorporating spinach, mushrooms, and zucchini, and prefers replacing b\u00e9chamel sauce with a lighter alternative."
@@ -42,7 +42,7 @@
   {
     "category": "Information seeking",
     "subcategory": "Recipe Retrieval",
-    "iteration_index": 3,
+    "id": 3,
     "role": "assistant",
     "content": "Certainly! For a gluten-free vegetarian lasagna, we'll use gluten-free lasagna noodles. I'll include zucchini along with the spinach and mushrooms. Instead of b\u00e9chamel sauce, we can use a light ricotta cheese mixture seasoned with garlic and herbs for creaminess without the heaviness. The lasagna will still include layers of this ricotta mixture, tomato sauce, and a blend of mozzarella and Parmesan cheese. Would you like any tips on preparing the vegetables or assembling the lasagna?",
     "condition": "User requests a gluten-free vegetarian lasagna recipe, incorporating spinach, mushrooms, and zucchini, and prefers replacing b\u00e9chamel sauce with a lighter alternative."
@@ -50,7 +50,7 @@
   {
     "category": "Information seeking",
     "subcategory": "Recipe Retrieval",
-    "iteration_index": 4,
+    "id": 4,
     "role": "user",
     "content": "Yes, please provide tips on preparing the vegetables and assembling the lasagna. Also, could the recipe be suitable for freezing and reheating?",
     "condition": "User seeks advice on preparing vegetables and assembling the lasagna for optimal freezing and reheating, indicating a desire for a recipe that's convenient for later use."
@@ -58,7 +58,7 @@
   {
     "category": "Information seeking",
     "subcategory": "Recipe Retrieval",
-    "iteration_index": 4,
+    "id": 4,
     "role": "assistant",
     "content": "Absolutely! For the vegetables, lightly saut\u00e9 the spinach, mushrooms, and zucchini separately with a bit of olive oil and garlic until just tender. This prevents excess moisture in the lasagna. When assembling, start with a layer of tomato sauce at the bottom of your baking dish, followed by gluten-free noodles, the ricotta mixture, vegetables, and a sprinkle of cheese. Repeat the layers, ending with cheese on top. This lasagna freezes well; just cool it completely, cover tightly, and freeze. Reheat in the oven at 350\u00b0F until thoroughly warm. Would you like any additional modifications or details?",
     "condition": "User seeks advice on preparing vegetables and assembling the lasagna for optimal freezing and reheating, indicating a desire for a recipe that's convenient for later use."

@@ -1,8 +1,8 @@
 [
   {
-    "category": "Editing",
+    "category": "Editing 2",
     "subcategory": "Technical Jargon Simplification",
-    "iteration_index": 1,
+    "id": 1,
     "role": "user",
     "content": "Can you simplify this paragraph about blockchain technology for a general audience? 'Blockchain technology is a decentralized ledger that records all transactions across a network. It is designed to be secure and immutable, meaning once a transaction is recorded, it cannot be altered. This technology underpins cryptocurrencies like Bitcoin.'",
     "condition": "The user wants to simplify technical jargon for a general audience, focusing on blockchain technology."
@@ -10,7 +10,7 @@
   {
     "category": "Editing",
     "subcategory": "Technical Jargon Simplification",
-    "iteration_index": 1,
+    "id": 1,
     "role": "assistant",
     "content": "Sure! Blockchain is like a digital notebook that everyone can see, but no one can erase or change what's written in it. This notebook keeps track of who sends and receives digital money, like Bitcoin, making sure everything is fair and safe.",
     "condition": "The user wants to simplify technical jargon for a general audience, focusing on blockchain technology."
@@ -18,7 +18,7 @@
   {
     "category": "Editing",
     "subcategory": "Technical Jargon Simplification",
-    "iteration_index": 2,
+    "id": 2,
     "role": "user",
     "content": "That's a good start, but can you make it even simpler and add an analogy to help explain it better?",
     "condition": "The user seeks further simplification with the addition of a relatable analogy to enhance understanding."
@@ -26,7 +26,7 @@
   {
     "category": "Editing",
     "subcategory": "Technical Jargon Simplification",
-    "iteration_index": 2,
+    "id": 2,
     "role": "assistant",
     "content": "Of course! Imagine blockchain as a communal diary that everyone in a village has access to. Whenever someone gives or gets something, like a digital apple, they write it down in this diary. Everyone can see what's been written, so it's easy to check if the exchange is fair. But once something is written, it can't be smudged out or changed, keeping the record safe and honest. This diary system is what keeps digital currencies like Bitcoin working smoothly.",
     "condition": "The user seeks further simplification with the addition of a relatable analogy to enhance understanding."
@@ -34,7 +34,7 @@
   {
     "category": "Editing",
     "subcategory": "Technical Jargon Simplification",
-    "iteration_index": 3,
+    "id": 3,
     "role": "user",
     "content": "I like the analogy! However, could you now tailor the explanation towards children, using simpler language and a more familiar analogy?",
     "condition": "The user requests the explanation be adapted for children, using simpler language and a more engaging and familiar analogy."
@@ -42,7 +42,7 @@
   {
     "category": "Editing",
     "subcategory": "Technical Jargon Simplification",
-    "iteration_index": 3,
+    "id": 3,
     "role": "assistant",
     "content": "Absolutely! Think of blockchain as a magic coloring book that belongs to a whole group of friends. Whenever they trade stickers - like a shiny star or a cool car - they draw a picture of the trade in the book. Everyone can look at the book anytime to see all the trades, but no one can erase or change the drawings. This way, everyone knows the trades are fair, just like how in games, everyone needs to follow the rules. This special book helps make sure that trading things like Bitcoin, a type of digital money, is safe and fun.",
     "condition": "The user requests the explanation be adapted for children, using simpler language and a more engaging and familiar analogy."

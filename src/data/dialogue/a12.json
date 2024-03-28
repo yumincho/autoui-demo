@@ -1,8 +1,8 @@
 [
   {
-    "category": "Planning",
+    "category": "Planning 2",
     "subcategory": "Study Plan for Exams",
-    "iteration_index": 1,
+    "id": 1,
     "role": "user",
     "content": "I need to start planning my study schedule for the finals. I have exams in 4 weeks for mathematics, history, and biology. Can you help me set up a plan?",
     "condition": "The user provides a general request without details on available study hours or specific focus areas within each subject."
@@ -10,7 +10,7 @@
   {
     "category": "Planning",
     "subcategory": "Study Plan for Exams",
-    "iteration_index": 1,
+    "id": 1,
     "role": "assistant",
     "content": "Absolutely, I can help with that. To create a more effective study plan, could you specify how many hours per week you can dedicate to studying? Also, it would be helpful to know if you're aiming for a general review or if there are specific topics within each subject that you need to focus on more.",
     "condition": "The user provides a general request without details on available study hours or specific focus areas within each subject."
@@ -18,7 +18,7 @@
   {
     "category": "Planning",
     "subcategory": "Study Plan for Exams",
-    "iteration_index": 2,
+    "id": 2,
     "role": "user",
     "content": "Sure, I can dedicate around 20 hours a week to studying. I need a more focused review on algebra in mathematics, the Renaissance period in history, and genetics in biology.",
     "condition": "The user specifies available study hours and focus areas within each subject, allowing for a more tailored study plan."
@@ -26,7 +26,7 @@
   {
     "category": "Planning",
     "subcategory": "Study Plan for Exams",
-    "iteration_index": 2,
+    "id": 2,
     "role": "assistant",
     "content": "Great, with 20 hours a week and specific topics to focus on, we can draft a more targeted study plan. Considering the subjects and your focus areas, a balanced approach could involve dedicating an equal amount of time to each subject, prioritizing your specified topics. How does dividing your study time equally among the three subjects, with an emphasis on algebra, the Renaissance period, and genetics sound to you?",
     "condition": "The user specifies available study hours and focus areas within each subject, allowing for a more tailored study plan."
@@ -34,7 +34,7 @@
   {
     "category": "Planning",
     "subcategory": "Study Plan for Exams",
-    "iteration_index": 3,
+    "id": 3,
     "role": "user",
     "content": "That sounds like a good start, but I'm worried I won't have enough review time for the other topics in each subject. Can we adjust the plan to also include some general review for each subject?",
     "condition": "The user requests adjustments to the plan to include general review time for each subject, indicating a need for a balanced focus between specified topics and overall subject content."
@@ -42,7 +42,7 @@
   {
     "category": "Planning",
     "subcategory": "Study Plan for Exams",
-    "iteration_index": 3,
+    "id": 3,
     "role": "assistant",
     "content": "Of course, we can adjust the plan to ensure there's also time for a general review. Given your concerns, we could allocate 60% of your weekly study time to focus on algebra, the Renaissance period, and genetics, and the remaining 40% can be used for a general review of the other topics in each subject. This way, you'll have a comprehensive review while still prioritizing your key focus areas. Would you like to include specific days for each topic, or prefer a more flexible approach?",
     "condition": "The user requests adjustments to the plan to include general review time for each subject, indicating a need for a balanced focus between specified topics and overall subject content."
@@ -50,7 +50,7 @@
   {
     "category": "Planning",
     "subcategory": "Study Plan for Exams",
-    "iteration_index": 4,
+    "id": 4,
     "role": "user",
     "content": "Let's include specific days for each topic to keep things organized. And could we add in some buffer time for unexpected events or additional review if needed?",
     "condition": "The user asks for the study plan to include specific days for studying each topic and buffer time, indicating a preference for a detailed and flexible schedule."
@@ -58,7 +58,7 @@
   {
     "category": "Planning",
     "subcategory": "Study Plan for Exams",
-    "iteration_index": 4,
+    "id": 4,
     "role": "assistant",
     "content": "Absolutely, incorporating specific days will help maintain organization and focus. We can structure your study plan to include buffer times as well, ensuring flexibility for unexpected events or additional review sessions. Here's a refined plan: allocate specific days of the week to each subject, with Monday and Thursday for mathematics, focusing on algebra and general review; Tuesday and Friday for history, emphasizing the Renaissance period and general content; and Wednesday and Saturday for biology, with a focus on genetics and overall review. Sundays can serve as your buffer day for additional study or rest. Does this structure align with your needs?",
     "condition": "The user asks for the study plan to include specific days for studying each topic and buffer time, indicating a preference for a detailed and flexible schedule."
