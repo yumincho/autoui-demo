@@ -65,16 +65,6 @@ const Content = styled.div`
   gap: 4px;
 `;
 
-const TargetTag = styled.div`
-  font-size: 12px;
-  font-weight: bold;
-  border: 1px solid ${colors.blue500};
-  color: ${colors.blue500};
-  width: fit-content;
-  padding: 4px 8px;
-  border-radius: 5px;
-`;
-
 const Playground = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -122,11 +112,7 @@ const Demo = () => {
         </Tags>
         <Dialogue>
           {dialogueData[utteranceType].map((utterance) => (
-            <Utterance
-              key={utterance.id}
-              role={utterance.role}
-              checked={"checked" in utterance && utterance.checked}
-            >
+            <Utterance key={utterance.id} role={utterance.role}>
               <Role>
                 {utterance.role == "assistant" ? (
                   <img src="/src/asset/chatgpt.png" width="32" />
@@ -135,9 +121,6 @@ const Demo = () => {
                 )}
               </Role>
               <Content>
-                {"checked" in utterance && utterance.checked && (
-                  <TargetTag>target</TargetTag>
-                )}
                 <div>{utterance.content}</div>
               </Content>
             </Utterance>
