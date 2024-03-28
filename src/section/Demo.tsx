@@ -27,6 +27,7 @@ const Tags = styled.div`
   font-size: 12px;
   gap: 8px;
   width: fit-content;
+  overflow: auto;
 `;
 
 const Dialogue = styled.div`
