@@ -45,5 +45,5 @@ const dialogueData = {
 export default dialogueData;
 export const dialogueDataKeys = Object.keys(dialogueData) as Array<
   keyof typeof dialogueData
->;
+> as Array<string>;
 export type DialogueDataKeys = (typeof dialogueDataKeys)[number];
