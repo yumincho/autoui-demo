@@ -101,7 +101,7 @@ const Result = styled.div`
 
 const Demo = () => {
   const [utteranceType, setUtteranceType] =
-    useState<DialogueDataKeys>("summarization");
+    useState<DialogueDataKeys>("Summarization");
 
   return (
     <Layout>
