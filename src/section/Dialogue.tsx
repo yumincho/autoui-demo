@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import dialogueData from "@/data/dialogue";
 import { dialogueDataKeys } from "@/data/dialogue";
+import type { DialogueDataKeys } from "@/data/dialogue";
 import styled from "@emotion/styled";
 import { colors } from "@/styles";
 
@@ -73,8 +74,8 @@ const DialogueButton = styled.button`
   }
 `;
 interface DialogueProps {
-  utteranceType: string;
-  setUtteranceType: (utteranceType: string) => void;
+  utteranceType: DialogueDataKeys;
+  setUtteranceType: (utteranceType: DialogueDataKeys) => void;
 }
 
 const Dialogue = ({ utteranceType, setUtteranceType }: DialogueProps) => {
@@ -103,8 +104,8 @@ const Dialogue = ({ utteranceType, setUtteranceType }: DialogueProps) => {
       {showDialogue && (
         <div style={{ display: "flex", flexDirection: "column" }}>
           <DialogueContent>
-            {dialogueData[utteranceType].map((utterance) => (
-              <Utterance key={utterance.id} role={utterance.role}>
+            {dialogueData[utteranceType].slice(1).map((utterance) => (
+              <Utterance key={utterance.id} role={utterance.role ?? ""}>
                 <Role>
                   {utterance.role == "assistant" ? (
                     <img src="assets/chatgpt.png" width="24" />

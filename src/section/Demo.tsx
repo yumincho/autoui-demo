@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 import Dialogue from "./Dialogue";
 import type { DialogueDataKeys } from "@/data/dialogue";
-import { dialogueDataKeys } from "@/data/dialogue";
+import dialogueData, { dialogueDataKeys } from "@/data/dialogue";
 import Playground from "./Playground";
 
 const Layout = styled.div`
@@ -12,10 +12,21 @@ const Layout = styled.div`
   width: 100%;
 `;
 
+export interface DialogueConfig {
+  userID: string;
+  shortcutID: string;
+  shortcutIndex: number;
+}
+
 const Demo = () => {
   const [utteranceType, setUtteranceType] = useState<DialogueDataKeys>(
     dialogueDataKeys[0]
   );
+
+  const dialogueConfig = dialogueData[utteranceType].slice(
+    0,
+    1
+  )[0] as DialogueConfig;
 
   return (
     <Layout>
@@ -24,7 +35,11 @@ const Demo = () => {
         setUtteranceType={setUtteranceType}
       />
 
-      <Playground />
+      <Playground
+        userID={dialogueConfig.userID}
+        shortcutID={dialogueConfig.shortcutID}
+        shortcutIndex={dialogueConfig.shortcutIndex}
+      />
     </Layout>
   );
 };
