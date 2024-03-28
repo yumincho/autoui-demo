@@ -91,8 +91,9 @@ const Result = styled.div`
 `;
 
 const Demo = () => {
-  const [utteranceType, setUtteranceType] =
-    useState<DialogueDataKeys>("Summarization");
+  const [utteranceType, setUtteranceType] = useState<DialogueDataKeys>(
+    dialogueDataKeys[0]
+  );
 
   return (
     <Layout>
