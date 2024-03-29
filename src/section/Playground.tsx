@@ -123,7 +123,7 @@ const Playground = ({
     e.preventDefault();
     setIsSending(true);
     setIsSendAble(false);
-    setResult("Loading...");
+    setResult("Generating resopnse...");
     const result = await handleRequest(
       userID,
       shortcutID,
