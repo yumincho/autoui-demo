@@ -35,9 +35,30 @@ const Result = styled.div`
 
   border-radius: 5px;
 
-  padding: 10px;
+  padding: 12px 16px;
   background-color: ${colors.gray200};
   overflow: auto;
+`;
+
+const ExampleButton = styled.button`
+  width: fit-content;
+  background-color: ${colors.blue200};
+
+  font-size: 12px;
+`;
+
+const SendButton = styled.button`
+  width: auto;
+  border: none;
+
+  background-color: ${colors.blue500};
+  color: ${colors.white};
+
+  &:disabled {
+    background-color: ${colors.gray200};
+    color: ${colors.gray400};
+    cursor: not-allowed;
+  }
 `;
 
 const url = "http://server.hyungyu.com:7161/runShortcut";
@@ -85,7 +106,12 @@ const handleRequest = async (
   }
 };
 
-const Playground = ({ userID, shortcutID, shortcutIndex }: DialogueConfig) => {
+const Playground = ({
+  userID,
+  shortcutID,
+  shortcutIndex,
+  exampleRequest,
+}: DialogueConfig) => {
   const [result, setResult] = useState<string>("");
   const [value, setValue] = useState<string>("");
 
@@ -105,12 +131,43 @@ const Playground = ({ userID, shortcutID, shortcutIndex }: DialogueConfig) => {
     <Layout>
       <Request onSubmit={(e) => handleClick(e, value)}>
         <textarea
-          style={{ height: "100%", resize: "none" }}
+          style={{ height: "100%", resize: "none", padding: "6px 8px" }}
           onChange={(e) => setValue(e.target.value)}
           value={value}
           placeholder="Type your own shortcut input here..."
         />
-        <button style={{ width: "auto" }}>Send</button>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "2px",
+          }}
+        >
+          {exampleRequest && (
+            <div
+              style={{
+                fontSize: "12px",
+                fontStyle: "italic",
+              }}
+            >
+              Not sure which input to use? Try an example:
+            </div>
+          )}
+          <div style={{ display: "flex", gap: "2px", overflow: "auto" }}>
+            {exampleRequest?.map((request, index) => (
+              <ExampleButton
+                key={index}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setValue(request);
+                }}
+              >
+                Example {index + 1}
+              </ExampleButton>
+            ))}
+          </div>
+        </div>
+        <SendButton disabled={value === ""}>Send</SendButton>
       </Request>
 
       <Result>

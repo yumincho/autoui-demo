@@ -18,6 +18,7 @@ export interface DialogueConfig {
   userID: string;
   shortcutID: string;
   shortcutIndex: number;
+  exampleRequest?: string[];
 }
 
 const Demo = () => {
@@ -41,6 +42,7 @@ const Demo = () => {
         userID={dialogueConfig.userID}
         shortcutID={dialogueConfig.shortcutID}
         shortcutIndex={dialogueConfig.shortcutIndex}
+        exampleRequest={dialogueConfig.exampleRequest}
       />
     </Layout>
   );
