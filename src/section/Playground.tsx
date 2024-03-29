@@ -96,14 +96,10 @@ const handleRequest = async (
       body: JSON.stringify(data(userID, shortcutID, shortcutIndex, value)),
     });
 
-    if (response.ok) {
-      const result = await response.json();
-      return result;
-    } else {
-      console.error("Failed to fetch");
-    }
+    const result = await response.json();
+    return result;
   } catch (error) {
-    console.error(error);
+    return { result: "Failed to send request" };
   }
 };
 
