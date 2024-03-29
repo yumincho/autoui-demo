@@ -10,6 +10,8 @@ const Layout = styled.div`
   display: flex;
   height: 600px;
   width: 100%;
+  gap: 10px;
+  max-width: 960px;
 `;
 
 export interface DialogueConfig {

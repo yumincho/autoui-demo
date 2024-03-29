@@ -8,30 +8,40 @@ import { DialogueConfig } from "./Demo";
 
 const Layout = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: left;
-  padding: 10px;
-  gap: 10px;
+  grid-template-columns: auto 1fr;
+
   height: auto;
   width: 100%;
+
+  text-align: left;
+  gap: 10px;
 `;
 
-const Input = styled.label`
+const Request = styled.form`
   display: flex;
   flex-direction: column;
   gap: 4px;
+
+  width: 45ch;
+  height: 100%;
+
+  overflow: auto;
+  resize: horizontal;
 `;
 
 const Result = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  background-color: ${colors.gray100};
+
   border-radius: 5px;
-  height: 100%;
+
+  padding: 10px;
+  background-color: ${colors.gray200};
+  overflow: auto;
 `;
 
-const url = "https://server.hyungyu.com:7161/runShortcut";
+const url = "http://server.hyungyu.com:7161/runShortcut";
+
 const data = (
   userID: string,
   shortcutID: string,
@@ -93,17 +103,14 @@ const Playground = ({ userID, shortcutID, shortcutIndex }: DialogueConfig) => {
 
   return (
     <Layout>
-      <form onSubmit={(e) => handleClick(e, value)}>
-        <Input>
-          Input
-          <textarea
-            style={{ height: "100%" }}
-            onChange={(e) => setValue(e.target.value)}
-            value={value}
-          />
-        </Input>
-        <button>Send</button>
-      </form>
+      <Request onSubmit={(e) => handleClick(e, value)}>
+        <textarea
+          style={{ height: "100%", resize: "none" }}
+          onChange={(e) => setValue(e.target.value)}
+          value={value}
+        />
+        <button style={{ width: "auto" }}>Send</button>
+      </Request>
 
       <Result>
         <Markdown remarkPlugins={[remarkGfm]}>{result}</Markdown>

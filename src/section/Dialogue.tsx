@@ -8,7 +8,7 @@ import type { DialogueDataKeys } from "@/data/dialogue";
 import styled from "@emotion/styled";
 import { colors } from "@/styles";
 
-const DialogueTab = styled.div`
+const Layout = styled.div`
   display: flex;
   height: 100%;
   gap: 10px;
@@ -30,8 +30,11 @@ const DialogueContent = styled.div`
   height: 100%;
   overflow: auto;
   border-radius: 5px;
-  width: 50ch;
+  width: 45ch;
   border: 1px solid ${colors.gray300};
+  resize: horizontal;
+  min-width: 240px;
+  max-width: 600px;
 `;
 
 interface UtteranceProps {
@@ -81,10 +84,10 @@ interface DialogueProps {
 }
 
 const Dialogue = ({ utteranceType, setUtteranceType }: DialogueProps) => {
-  const [showDialogue, setShowDialogue] = useState<boolean>(true);
+  const [showDialogue, setShowDialogue] = useState<boolean>(false);
 
   return (
-    <DialogueTab>
+    <Layout>
       <Tabs>
         {dialogueDataKeys.map((key) => (
           <button
@@ -128,7 +131,7 @@ const Dialogue = ({ utteranceType, setUtteranceType }: DialogueProps) => {
           </DialogueButton>
         </div>
       )}
-    </DialogueTab>
+    </Layout>
   );
 };
 
