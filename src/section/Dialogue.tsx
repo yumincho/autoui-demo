@@ -93,8 +93,10 @@ const Dialogue = ({ utteranceType, setUtteranceType }: DialogueProps) => {
           <button
             key={key}
             onClick={() => {
+              if (key === utteranceType) {
+                setShowDialogue((prev) => !prev);
+              }
               setUtteranceType(key);
-              setShowDialogue(true);
             }}
             style={{
               backgroundColor:
