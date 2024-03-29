@@ -23,6 +23,7 @@ const Request = styled.form`
   gap: 4px;
 
   width: 32ch;
+  max-width: 50ch;
   height: 100%;
 
   overflow: auto;
