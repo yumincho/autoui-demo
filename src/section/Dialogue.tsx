@@ -7,7 +7,6 @@ import { dialogueDataKeys } from "@/data/dialogue";
 import type { DialogueDataKeys } from "@/data/dialogue";
 import styled from "@emotion/styled";
 import { colors } from "@/styles";
-import { RequestStateProps } from "./Demo";
 
 const Layout = styled.div`
   display: flex;
@@ -113,13 +112,14 @@ const DialogueButton = styled.button`
 interface DialogueProps {
   utteranceType: DialogueDataKeys;
   setUtteranceType: (utteranceType: DialogueDataKeys) => void;
+  setRequestValue: (value: string) => void;
 }
 
 const Dialogue = ({
   utteranceType,
   setUtteranceType,
   setRequestValue,
-}: DialogueProps & Pick<RequestStateProps, "setRequestValue">) => {
+}: DialogueProps) => {
   const [showDialogue, setShowDialogue] = useState<boolean>(false);
 
   return (
@@ -133,10 +133,10 @@ const Dialogue = ({
               checked={utteranceType === key}
               key={key}
               onClick={() => {
+                setRequestValue(dialogueData[key][0].exampleRequest?.[0] ?? "");
                 if (key === utteranceType) {
                   setShowDialogue((prev) => !prev);
                 } else {
-                  setRequestValue("");
                   setUtteranceType(key);
                 }
               }}
