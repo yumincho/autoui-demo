@@ -18,7 +18,7 @@ const Section = styled.div<{ white?: boolean }>`
   background-color: ${(props) => (props.white ? colors.white : colors.blue200)};
   padding: 24px 32px;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 `;
 
 const SubTitle = styled.h2`
@@ -36,14 +36,6 @@ const Abstract = styled.div`
   max-width: 960px;
 `;
 
-const Author = styled.div`
-  padding: 10px;
-`;
-
-const Result = styled.div`
-  padding: 10px;
-`;
-
 function App() {
   return (
     <>
@@ -52,12 +44,10 @@ function App() {
         <SubTitle>Abstract</SubTitle>
         <Abstract>{paperData.abstract}</Abstract>
       </Section>
-      <Author>author</Author>
       <Section white>
         <SubTitle>Playground</SubTitle>
         <Demo />
       </Section>
-      <Result>result</Result>
     </>
   );
 }
