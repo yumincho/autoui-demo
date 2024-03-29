@@ -22,7 +22,7 @@ const Request = styled.form`
   flex-direction: column;
   gap: 4px;
 
-  width: 45ch;
+  width: 32ch;
   height: 100%;
 
   overflow: auto;
@@ -87,7 +87,7 @@ const handleRequest = async (
 
 const Playground = ({ userID, shortcutID, shortcutIndex }: DialogueConfig) => {
   const [result, setResult] = useState<string>("");
-  const [value, setValue] = useState<string>("How does the gravity work?");
+  const [value, setValue] = useState<string>("");
 
   const handleClick = async (e: FormEvent, value: string) => {
     e.preventDefault();
@@ -108,6 +108,7 @@ const Playground = ({ userID, shortcutID, shortcutIndex }: DialogueConfig) => {
           style={{ height: "100%", resize: "none" }}
           onChange={(e) => setValue(e.target.value)}
           value={value}
+          placeholder="Type your own shortcut input here..."
         />
         <button style={{ width: "auto" }}>Send</button>
       </Request>
