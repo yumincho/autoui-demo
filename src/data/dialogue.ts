@@ -10,7 +10,7 @@ const dialogueData = {
   "Vegetarian and gluten-free recipe": realDialogue2,
   "Write concise codes for python one-liner": realDialogue3,
   "Personalized calculator for complex computations": realDialogue4,
-  "Simple explanations using metaphor": realDialogue5,
+  "Simple explanations with bullet points": realDialogue5,
   "Respond with some very specific format": realDialogue6,
 };
 

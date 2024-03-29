@@ -2,7 +2,10 @@
   {
     "userID": "qwdlkqjwd",
     "shortcutID": "uADmE6Pv0J",
-    "shortcutIndex": 8
+    "shortcutIndex": 8,
+    "exampleRequest": [
+      "Imagine you're managing a space mission to explore distant galaxies. Your spacecraft requires a blend of rare elements for its propulsion system. Element X, priced at $3.5 million per gram, and Element Y, priced at $2.8 million per gram, are crucial components. The spacecraft's engine consumes 300 grams of Element X and 500 grams of Element Y for each interstellar jump. Your mission plan entails conducting 50 jumps in total. To ensure budgetary feasibility, you aim for a unit cost per jump and a profit margin of 40%. What should be the manufacturing cost per jump?"
+    ]
   },
   {
     "content": "Using horse placenta, which costs 1.8 million won per kg, and fingerroot, which costs 2.2 million won per 10 kg, to make pills, with each pill containing 500mg of horse placenta and 500mg of fingerroot, planning to pack 90 pills per bottle. If targeting a unit price per bottle and a margin rate of 30%, what should be the manufacturing cost per bottle?",

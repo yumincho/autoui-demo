@@ -2,7 +2,8 @@
   {
     "userID": "qwdlkqjwd",
     "shortcutID": "ru9Wi7WhXU",
-    "shortcutIndex": 4
+    "shortcutIndex": 4,
+    "exampleRequest": ["How does the gravity work?", "Photosynthesis process"]
   },
   {
     "content": "Could you explain how special relativity works? I'm learning it, but it's too complicated.",

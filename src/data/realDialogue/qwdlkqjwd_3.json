@@ -2,7 +2,10 @@
   {
     "userID": "qwdlkqjwd",
     "shortcutID": "DhQh9lSGzm",
-    "shortcutIndex": 3
+    "shortcutIndex": 3,
+    "exampleRequest": [
+      "Create a Python script that generates a random password of 12 characters containing a mix of letters, numbers, and special characters."
+    ]
   },
   {
     "content": "Write a python code that computes an average number of 10 numbers",
