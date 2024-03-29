@@ -2,7 +2,8 @@
   {
     "userID": "qwdlkqjwd",
     "shortcutID": "Oqb19n94PH",
-    "shortcutIndex": 2
+    "shortcutIndex": 2,
+    "exampleRequest": ["How to make chocolate brownies?", "Burger with fries"]
   },
   {
     "content": "I'm looking for a traditional Italian lasagna recipe.",
