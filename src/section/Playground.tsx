@@ -116,9 +116,13 @@ const Playground = ({
   setRequestValue,
 }: DialogueConfig & RequestStateProps) => {
   const [result, setResult] = useState<string>("");
+  const [isSending, setIsSending] = useState<boolean>(false);
+  const [isSendAble, setIsSendAble] = useState<boolean>(true);
 
   const handleClick = async (e: FormEvent, value: string) => {
     e.preventDefault();
+    setIsSending(true);
+    setIsSendAble(false);
     setResult("Loading...");
     const result = await handleRequest(
       userID,
@@ -127,6 +131,7 @@ const Playground = ({
       value
     );
     setResult(result.result);
+    setIsSendAble(true);
   };
 
   return (
@@ -134,7 +139,10 @@ const Playground = ({
       <Request onSubmit={(e) => handleClick(e, requestValue)}>
         <textarea
           style={{ height: "100%", resize: "none", padding: "6px 8px" }}
-          onChange={(e) => setRequestValue(e.target.value)}
+          onChange={(e) => {
+            setRequestValue(e.target.value);
+            !isSending && setIsSendAble(e.target.value.length > 0);
+          }}
           value={requestValue}
           placeholder="Type your own shortcut input here..."
         />
@@ -169,7 +177,7 @@ const Playground = ({
             ))}
           </div>
         </div>
-        <SendButton disabled={requestValue === ""}>Send</SendButton>
+        <SendButton disabled={!isSendAble}>Send</SendButton>
       </Request>
 
       <Result>
