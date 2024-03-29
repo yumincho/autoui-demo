@@ -15,11 +15,11 @@ const Layout = styled.div`
   gap: 10px;
 `;
 
-const Tabs = styled.div`
+const Tabs = styled.form`
   display: flex;
   flex-direction: column;
   font-size: 12px;
-  gap: 8px;
+  gap: 4px;
   width: fit-content;
   overflow: auto;
 `;
@@ -63,6 +63,37 @@ const Content = styled.div`
   gap: 4px;
 `;
 
+const TabLabel = styled.label`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  margin: 0;
+
+  span {
+    padding: 6px 8px;
+    border-radius: 5px;
+  }
+`;
+
+const Tab = styled.input<{ type: string; checked: boolean }>`
+  appearance: none;
+  margin: 0;
+
+  + span {
+    background-color: ${(props) =>
+      props.checked ? colors.blue200 : colors.gray100};
+  }
+
+  + span:hover {
+    background-color: ${colors.gray200};
+  }
+
+  &:checked + span:hover {
+    background-color: ${colors.blue300};
+  }
+`;
+
 const DialogueButton = styled.button`
   border: none;
   background-color: ${colors.white};
@@ -95,24 +126,28 @@ const Dialogue = ({
     <Layout>
       <Tabs>
         {dialogueDataKeys.map((key) => (
-          <button
-            key={key}
-            onClick={() => {
-              if (key === utteranceType) {
-                setShowDialogue((prev) => !prev);
-              } else {
-                setRequestValue("");
-                setUtteranceType(key);
-              }
-            }}
-            style={{
-              backgroundColor:
-                utteranceType == key ? colors.blue200 : colors.gray100,
-              width: "120px",
-            }}
-          >
-            {key}
-          </button>
+          <TabLabel>
+            <Tab
+              type="radio"
+              name="shortcut"
+              checked={utteranceType === key}
+              key={key}
+              onClick={() => {
+                if (key === utteranceType) {
+                  setShowDialogue((prev) => !prev);
+                } else {
+                  setRequestValue("");
+                  setUtteranceType(key);
+                }
+              }}
+              style={{
+                backgroundColor:
+                  utteranceType == key ? colors.blue200 : colors.gray100,
+              }}
+              value={key}
+            />
+            <span>{key}</span>
+          </TabLabel>
         ))}
       </Tabs>
       {showDialogue && (
