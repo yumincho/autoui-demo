@@ -18,7 +18,7 @@ export interface DialogueConfig {
   userID: string;
   shortcutID: string;
   shortcutIndex: number;
-  exampleRequest?: string[];
+  exampleRequest: string[];
 }
 
 export interface RequestStateProps {
@@ -36,7 +36,9 @@ const Demo = () => {
     1
   )[0] as DialogueConfig;
 
-  const [requestValue, setRequestValue] = useState<string>("");
+  const [requestValue, setRequestValue] = useState<string>(
+    dialogueConfig.exampleRequest[0]
+  );
 
   return (
     <Layout>
