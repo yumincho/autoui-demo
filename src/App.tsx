@@ -29,6 +29,15 @@ const SubTitle = styled.h2`
   max-width: 960px;
 `;
 
+const Caption = styled.div`
+  width: 100%;
+  font-size: 16px;
+  color: ${colors.gray400};
+  text-align: left;
+  max-width: 960px;
+  margin-bottom: 4px;
+`;
+
 const Abstract = styled.div`
   font-size: 17px;
   text-wrap: balance;
@@ -45,7 +54,11 @@ function App() {
         <Abstract>{paperData.abstract}</Abstract>
       </Section>
       <Section white>
-        <SubTitle>Playground</SubTitle>
+        <SubTitle>GPT Shortcut Playground</SubTitle>
+        <Caption>
+          You can click the selected tab once again to see the original
+          dialogue.
+        </Caption>
         <Demo />
       </Section>
     </>
