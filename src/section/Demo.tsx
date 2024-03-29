@@ -21,6 +21,11 @@ export interface DialogueConfig {
   exampleRequest?: string[];
 }
 
+export interface RequestStateProps {
+  requestValue: string;
+  setRequestValue: (value: string) => void;
+}
+
 const Demo = () => {
   const [utteranceType, setUtteranceType] = useState<DialogueDataKeys>(
     dialogueDataKeys[0]
@@ -31,11 +36,14 @@ const Demo = () => {
     1
   )[0] as DialogueConfig;
 
+  const [requestValue, setRequestValue] = useState<string>("");
+
   return (
     <Layout>
       <Dialogue
         utteranceType={utteranceType}
         setUtteranceType={setUtteranceType}
+        setRequestValue={setRequestValue}
       />
 
       <Playground
@@ -43,6 +51,8 @@ const Demo = () => {
         shortcutID={dialogueConfig.shortcutID}
         shortcutIndex={dialogueConfig.shortcutIndex}
         exampleRequest={dialogueConfig.exampleRequest}
+        requestValue={requestValue}
+        setRequestValue={setRequestValue}
       />
     </Layout>
   );

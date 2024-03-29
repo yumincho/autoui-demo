@@ -4,7 +4,7 @@ import remarkGfm from "remark-gfm";
 
 import { colors } from "@/styles";
 import { FormEvent, useState } from "react";
-import { DialogueConfig } from "./Demo";
+import { DialogueConfig, RequestStateProps } from "./Demo";
 
 const Layout = styled.div`
   display: grid;
@@ -111,9 +111,10 @@ const Playground = ({
   shortcutID,
   shortcutIndex,
   exampleRequest,
-}: DialogueConfig) => {
+  requestValue,
+  setRequestValue,
+}: DialogueConfig & RequestStateProps) => {
   const [result, setResult] = useState<string>("");
-  const [value, setValue] = useState<string>("");
 
   const handleClick = async (e: FormEvent, value: string) => {
     e.preventDefault();
@@ -129,11 +130,11 @@ const Playground = ({
 
   return (
     <Layout>
-      <Request onSubmit={(e) => handleClick(e, value)}>
+      <Request onSubmit={(e) => handleClick(e, requestValue)}>
         <textarea
           style={{ height: "100%", resize: "none", padding: "6px 8px" }}
-          onChange={(e) => setValue(e.target.value)}
-          value={value}
+          onChange={(e) => setRequestValue(e.target.value)}
+          value={requestValue}
           placeholder="Type your own shortcut input here..."
         />
         <div
@@ -159,7 +160,7 @@ const Playground = ({
                 key={index}
                 onClick={(e) => {
                   e.preventDefault();
-                  setValue(request);
+                  setRequestValue(request);
                 }}
               >
                 Example {index + 1}
@@ -167,7 +168,7 @@ const Playground = ({
             ))}
           </div>
         </div>
-        <SendButton disabled={value === ""}>Send</SendButton>
+        <SendButton disabled={requestValue === ""}>Send</SendButton>
       </Request>
 
       <Result>

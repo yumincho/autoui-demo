@@ -7,6 +7,7 @@ import { dialogueDataKeys } from "@/data/dialogue";
 import type { DialogueDataKeys } from "@/data/dialogue";
 import styled from "@emotion/styled";
 import { colors } from "@/styles";
+import { RequestStateProps } from "./Demo";
 
 const Layout = styled.div`
   display: flex;
@@ -83,7 +84,11 @@ interface DialogueProps {
   setUtteranceType: (utteranceType: DialogueDataKeys) => void;
 }
 
-const Dialogue = ({ utteranceType, setUtteranceType }: DialogueProps) => {
+const Dialogue = ({
+  utteranceType,
+  setUtteranceType,
+  setRequestValue,
+}: DialogueProps & Pick<RequestStateProps, "setRequestValue">) => {
   const [showDialogue, setShowDialogue] = useState<boolean>(false);
 
   return (
@@ -95,8 +100,10 @@ const Dialogue = ({ utteranceType, setUtteranceType }: DialogueProps) => {
             onClick={() => {
               if (key === utteranceType) {
                 setShowDialogue((prev) => !prev);
+              } else {
+                setRequestValue("");
+                setUtteranceType(key);
               }
-              setUtteranceType(key);
             }}
             style={{
               backgroundColor:
