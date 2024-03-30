@@ -5,7 +5,9 @@
     "shortcutIndex": 3,
     "shortcutDescription": "This shortcut provides a concise Python code  tailored to specific needs.",
     "exampleRequest": [
-      "Create a Python script that generates a random password of 12 characters containing a mix of letters, numbers, and special characters."
+      "Create a Python script that generates a random password of 12 characters containing a mix of letters, numbers, and special characters.",
+      "Write a code that takes a list of integers as input and returns the sum of all even numbers in the list.",
+      "Script that checks if a given string is a palindrome or not"
     ]
   },
   {

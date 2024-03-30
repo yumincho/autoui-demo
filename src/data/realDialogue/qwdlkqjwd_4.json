@@ -4,7 +4,11 @@
     "shortcutID": "ru9Wi7WhXU",
     "shortcutIndex": 4,
     "shortcutDescription": "This shortcut simplifies complex concepts into bullet points using simple language.",
-    "exampleRequest": ["How does the gravity work?", "Photosynthesis process"]
+    "exampleRequest": [
+      "How does the gravity work?",
+      "Photosynthesis process",
+      "What is quantum entanglement?"
+    ]
   },
   {
     "content": "Could you explain how special relativity works? I'm learning it, but it's too complicated.",
