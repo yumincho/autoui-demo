@@ -3,6 +3,7 @@
     "userID": "qwdlkqjwd",
     "shortcutID": "DhQh9lSGzm",
     "shortcutIndex": 3,
+    "shortcutDescription": "This shortcut provides a concise Python code  tailored to specific needs.",
     "exampleRequest": [
       "Create a Python script that generates a random password of 12 characters containing a mix of letters, numbers, and special characters."
     ]

@@ -10,7 +10,7 @@ const Layout = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
 
-  height: auto;
+  height: 100%;
   width: 100%;
 
   text-align: left;
@@ -107,6 +107,7 @@ const Playground = ({
   userID,
   shortcutID,
   shortcutIndex,
+  shortcutDescription,
   exampleRequest,
   requestValue,
   setRequestValue,
@@ -131,60 +132,71 @@ const Playground = ({
   };
 
   return (
-    <Layout>
-      <Request onSubmit={(e) => handleClick(e, requestValue)}>
-        <textarea
-          style={{
-            height: "100%",
-            resize: "none",
-            padding: "6px 8px",
-            backgroundColor: colors.white,
-          }}
-          onChange={(e) => {
-            setRequestValue(e.target.value);
-            !isSending && setIsSendAble(e.target.value.length > 0);
-          }}
-          value={requestValue}
-          placeholder="Type your own shortcut input here..."
-        />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "2px",
-          }}
-        >
-          {exampleRequest && (
-            <div
-              style={{
-                fontSize: "12px",
-                fontStyle: "italic",
-              }}
-            >
-              Not sure which input to use? Try an example:
-            </div>
-          )}
-          <div style={{ display: "flex", gap: "2px", overflow: "auto" }}>
-            {exampleRequest?.map((request, index) => (
-              <ExampleButton
-                key={index}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setRequestValue(request);
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "auto",
+        width: "100%",
+      }}
+    >
+      <div style={{ textAlign: "left", marginBottom: "4px" }}>
+        <strong>{shortcutDescription}</strong>
+      </div>
+      <Layout>
+        <Request onSubmit={(e) => handleClick(e, requestValue)}>
+          <textarea
+            style={{
+              height: "100%",
+              resize: "none",
+              padding: "6px 8px",
+              backgroundColor: colors.white,
+            }}
+            onChange={(e) => {
+              setRequestValue(e.target.value);
+              !isSending && setIsSendAble(e.target.value.length > 0);
+            }}
+            value={requestValue}
+            placeholder="Type your own shortcut input here..."
+          />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "2px",
+            }}
+          >
+            {exampleRequest && (
+              <div
+                style={{
+                  fontSize: "12px",
+                  fontStyle: "italic",
                 }}
               >
-                Example {index + 1}
-              </ExampleButton>
-            ))}
+                Not sure which input to use? Try an example:
+              </div>
+            )}
+            <div style={{ display: "flex", gap: "2px", overflow: "auto" }}>
+              {exampleRequest?.map((request, index) => (
+                <ExampleButton
+                  key={index}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setRequestValue(request);
+                  }}
+                >
+                  Example {index + 1}
+                </ExampleButton>
+              ))}
+            </div>
           </div>
-        </div>
-        <SendButton disabled={!isSendAble}>Send</SendButton>
-      </Request>
-
-      <Result>
-        <Markdown remarkPlugins={[remarkGfm]}>{result}</Markdown>
-      </Result>
-    </Layout>
+          <SendButton disabled={!isSendAble}>Send</SendButton>
+        </Request>
+        <Result>
+          <Markdown remarkPlugins={[remarkGfm]}>{result}</Markdown>
+        </Result>
+      </Layout>
+    </div>
   );
 };
 

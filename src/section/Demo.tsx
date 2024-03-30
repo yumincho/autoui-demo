@@ -18,6 +18,7 @@ export interface DialogueConfig {
   userID: string;
   shortcutID: string;
   shortcutIndex: number;
+  shortcutDescription: string;
   exampleRequest: string[];
 }
 
@@ -52,6 +53,7 @@ const Demo = () => {
         userID={dialogueConfig.userID}
         shortcutID={dialogueConfig.shortcutID}
         shortcutIndex={dialogueConfig.shortcutIndex}
+        shortcutDescription={dialogueConfig.shortcutDescription}
         exampleRequest={dialogueConfig.exampleRequest}
         requestValue={requestValue}
         setRequestValue={setRequestValue}

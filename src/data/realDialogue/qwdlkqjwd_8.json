@@ -3,6 +3,7 @@
     "userID": "qwdlkqjwd",
     "shortcutID": "uADmE6Pv0J",
     "shortcutIndex": 8,
+    "shortcutDescription": "This shortcut calculates complex math problems.",
     "exampleRequest": [
       "Imagine you're managing a space mission to explore distant galaxies. Your spacecraft requires a blend of rare elements for its propulsion system. Element X, priced at $3.5 million per gram, and Element Y, priced at $2.8 million per gram, are crucial components. The spacecraft's engine consumes 300 grams of Element X and 500 grams of Element Y for each interstellar jump. Your mission plan entails conducting 50 jumps in total. To ensure budgetary feasibility, you aim for a unit cost per jump and a profit margin of 40%. What should be the manufacturing cost per jump?"
     ]
