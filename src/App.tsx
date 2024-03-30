@@ -57,8 +57,8 @@ function App() {
       <Section white>
         <SubTitle>GPT Shortcut Playground</SubTitle>
         <Caption>
-          You can click the selected tab once again to see the original
-          dialogue.
+          You can click the selected tab once again to see the dialogue used for
+          generating the GPT shortcut.
         </Caption>
         <Demo />
       </Section>
