@@ -134,7 +134,12 @@ const Playground = ({
     <Layout>
       <Request onSubmit={(e) => handleClick(e, requestValue)}>
         <textarea
-          style={{ height: "100%", resize: "none", padding: "6px 8px" }}
+          style={{
+            height: "100%",
+            resize: "none",
+            padding: "6px 8px",
+            backgroundColor: colors.white,
+          }}
           onChange={(e) => {
             setRequestValue(e.target.value);
             !isSending && setIsSendAble(e.target.value.length > 0);

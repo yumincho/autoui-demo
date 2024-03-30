@@ -10,6 +10,7 @@ const Title = styled.h1`
   font-weight: bold;
   padding: 28px;
   text-wrap: balance;
+  background-color: ${colors.white};
 `;
 
 const Section = styled.div<{ white?: boolean }>`
