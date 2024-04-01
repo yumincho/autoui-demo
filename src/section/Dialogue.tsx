@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { Ref, useState } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkBreaks from "remark-breaks";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 import dialogueData from "@/data/dialogue";
 import { dialogueDataKeys } from "@/data/dialogue";
@@ -163,7 +166,27 @@ const Dialogue = ({
                   )}
                 </Role>
                 <Content>
-                  <Markdown remarkPlugins={[remarkGfm]}>
+                  <Markdown
+                    remarkPlugins={[remarkGfm, remarkBreaks]}
+                    components={{
+                      code({ className, children, ...props }) {
+                        const match = /language-(\w+)/.exec(className || "");
+                        return match ? (
+                          <SyntaxHighlighter
+                            language={match[1]}
+                            PreTag="div"
+                            {...props}
+                            style={materialDark}
+                            ref={props.ref as Ref<SyntaxHighlighter>}
+                          >
+                            {String(children).replace(/\n$/, "")}
+                          </SyntaxHighlighter>
+                        ) : (
+                          <code {...props}>{children}</code>
+                        );
+                      },
+                    }}
+                  >
                     {utterance.content}
                   </Markdown>
                 </Content>
