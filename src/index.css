@@ -41,6 +41,11 @@ strong {
   line-height: 1.6;
 }
 
+ol,
+ul {
+  margin-left: 24px;
+}
+
 button {
   border-radius: 5px;
   border: 1px solid transparent;
